@@ -73,13 +73,15 @@ class JetsonIK:
                 foot_pos_relative[i][2] = foot_z
 
             # update surf translation 
-            # surf_translation[0] = np.cos(t_start * np.pi * 2.0 * 0.25) * 0.1
-            # surf_translation[1] = np.sin(t_start * np.pi * 2.0 * 0.25) * 0.05
+            animation_speed = 1.0
+            # surf_translation[0] = np.cos(t_start * np.pi * 2.0 * 0.25 * animation_speed) * 0.05
+            # surf_translation[1] = np.sin(t_start * np.pi * 2.0 * 0.25 * animation_speed) * 0.05
+            # surf_translation[2] = np.sin(t_start * np.pi * 2.0 * 0.25 * animation_speed) * 0.05
 
             # update surf rotation
-            # surf_rotation[0] = np.sin(t_start * np.pi * 2.0 * 0.5) * np.deg2rad(15.0)
-            # surf_rotation[1] = np.sin(t_start * np.pi * 2.0 * 0.5) * np.deg2rad(15.0)
-            surf_rotation[2] = np.sin(t_start * np.pi * 2.0 * 0.5) * np.deg2rad(30.0)
+            # surf_rotation[0] = np.sin(t_start * np.pi * 2.0 * 0.25 * animation_speed) * np.deg2rad(15.0)
+            # surf_rotation[1] = np.sin(t_start * np.pi * 2.0 * 0.25 * animation_speed) * np.deg2rad(15.0)
+            surf_rotation[2] = np.sin(t_start * np.pi * 2.0 * 0.25 * animation_speed) * np.deg2rad(30.0)
 
             # compute surf transformation matrix
             MathUtils.matrix_translation(T_surf, surf_translation)
