@@ -3,12 +3,29 @@
 #include <limits>
 #include <cassert>
 #include <iostream>
+#include "math/Mathf.h"
 
 using namespace std;
 
 namespace Crawler {
 
 Leg::Leg(){
+
+    // create joints
+    for(int i = 0; i < 4; i++){
+        Joint* joint = new Joint();
+        joints.push_back(joint);
+    }
+
+    // set joint limits
+    joints[0]->limitMin = -PIf * 0.5f;
+    joints[0]->limitMax = +PIf * 0.5f;
+    joints[1]->limitMin = -PIf * 0.5f;
+    joints[1]->limitMax = +PIf * 0.5f;
+    joints[2]->limitMin = -PIf * 0.5f;
+    joints[2]->limitMax = +PIf * 0.5f;
+    joints[3]->limitMin = -PIf * 0.5f;
+    joints[3]->limitMax = +PIf * 0.5f;
     
 }
 
@@ -30,10 +47,10 @@ void Leg::SetHipTransform(const Eigen::Vector3f& translation, float angle){
 
 bool Leg::IKExact(const Eigen::Vector3f& Q, float phi, float angles_out[4]){
 
-    const float L0 = joints[0].length;
-    const float L1 = joints[1].length;
-    const float L2 = joints[2].length;
-    const float L3 = joints[3].length;
+    const float L0 = joints[0]->length;
+    const float L1 = joints[1]->length;
+    const float L2 = joints[2]->length;
+    const float L3 = joints[3]->length;
 
     float xy = sqrt(Q[0] * Q[0] + Q[1] * Q[1]) - L0 - L3 * sin(phi);
     float z = Q[2] + L3 * cos(phi);
@@ -46,25 +63,25 @@ bool Leg::IKExact(const Eigen::Vector3f& Q, float phi, float angles_out[4]){
     
     float a2 = -acos(v);
     a2 = Mathf::angle_to_symmetric(a2);
-    if(a2 < joints[2].limit_min || a2 > joints[2].limit_max){
+    if(a2 < joints[2]->limitMin || a2 > joints[2]->limitMax){
         return false;
     }
 
     float a1 = atan2(z, xy) - atan2(L2 * sin(a2), L1 + L2 * cos(a2));
     a1 = Mathf::angle_to_symmetric(a1);
-    if(a1 < joints[1].limit_min || a1 > joints[1].limit_max){
+    if(a1 < joints[1]->limitMin || a1 > joints[1]->limitMax){
         return false;
     }
 
     float a3 = phi - a1 - a2 - PIf * 0.5f;
     a3 = Mathf::angle_to_symmetric(a3);
-    if(a3 < joints[3].limit_min || a3 > joints[3].limit_max){
+    if(a3 < joints[3]->limitMin || a3 > joints[3]->limitMax){
         return false;
     }
 
     float a0 = atan2(Q[1], Q[0]);
     a0 = Mathf::angle_to_symmetric(a0);
-    if(a0 < joints[0].limit_min || a0 > joints[0].limit_max){
+    if(a0 < joints[0]->limitMin || a0 > joints[0]->limitMax){
         return false;
     }
     
@@ -118,12 +135,12 @@ bool Leg::IKSearch(const Eigen::Vector3f& Q, float phi_target, float angles_out[
 float Leg::IKLoss(float phi_target, float phi_actual, float angles_old[4], float angles_new[4]){
 
     const float w_phi = 1.0f;
-    const float w_angle = 0.5f;
+    const float w_angle = 2.0f;
 
     float loss = 0.0f;
     
     float dphi = phi_target - phi_actual;
-    loss += (dphi*dphi)*w_phi + abs(dphi) * w_phi;
+    loss += ((dphi*dphi) + abs(dphi)) * w_phi;
 
     float da_max = 0.0f;
     for(int i = 0; i < 4; i++){
@@ -133,7 +150,7 @@ float Leg::IKLoss(float phi_target, float phi_actual, float angles_old[4], float
         }
     }
 
-    loss += (da_max*da_max)*w_phi + abs(da_max)*w_phi;
+    loss += ((da_max*da_max) + abs(da_max))*w_angle;
 
     return loss;
 

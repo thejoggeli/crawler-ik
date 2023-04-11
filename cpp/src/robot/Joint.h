@@ -1,7 +1,8 @@
 #pragma once
 
-#include "math/Mathf.h"
-#include "parts/XYZServo.h"
+#include <cstdint>
+
+class XYZServo;
 
 namespace Crawler {
 
@@ -9,19 +10,27 @@ class Joint {
 
 public:
 
-    float limit_min = -PIf * 0.5f;
-    float limit_max = +PIf * 0.5f;
+    float limitMin = -1.0f;
+    float limitMax = +1.0f;
     float length = 1.0f;
     
-    float current_angle = 0.0f;
-    float target_angle = 0.0f;
+    float currentAngle = 0.0f;
+    float lastTargetAngle = 0.0f;
+    float currentTargetAngle = 0.0f;
 
-    float servo_angle_scale = 1.0f;
+    float servoAngleScale = 1.0f;
+    
     XYZServo* servo = nullptr;
 
     Joint();
 
-    void SetServo(XYZServo* servo, float angle_scale);
+    void SetServo(XYZServo* servo, float angleScale);
+
+    void ReadCurrentAngle();
+
+    void SetTargetAngle(float angle);
+
+    uint16_t AngleToXYZ(float angle);
 
 };    
 

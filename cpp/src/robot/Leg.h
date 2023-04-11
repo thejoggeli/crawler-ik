@@ -3,6 +3,7 @@
 #include "Eigen/Fix"
 #include "Eigen/Geometry"
 #include "Joint.h"
+#include <vector>
 
 namespace Crawler {
 
@@ -10,12 +11,14 @@ class Leg {
 
 public:
 
-    Crawler::Joint joints[4];
+    std::vector<Joint*> joints;
 
+    // transform from robot center to hip
     Eigen::Affine3f hip_translation = Eigen::Affine3f::Identity();
     Eigen::Affine3f hip_rotation = Eigen::Affine3f::Identity();
     Eigen::Affine3f hip_transform = Eigen::Affine3f::Identity();
 
+    // transform from hip to robot center
     Eigen::Affine3f hip_translation_inv = Eigen::Affine3f::Identity();
     Eigen::Affine3f hip_rotation_inv = Eigen::Affine3f::Identity();
     Eigen::Affine3f hip_transform_inv = Eigen::Affine3f::Identity();

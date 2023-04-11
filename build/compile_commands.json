@@ -25,14 +25,14 @@
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServoManager.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/parts/XYZServoManager.cpp",
-  "file": "/home/crawler/Projects/crawler-ik/cpp/src/parts/XYZServoManager.cpp"
+  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
-  "file": "/home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp"
+  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/robot/Robot.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/robot/Robot.cpp"
 },
 
 {

@@ -34,8 +34,8 @@ add_executable (
     libs/serialib/Serialib.cpp
     src/comm/SerialStream.cpp
     src/parts/XYZServo.cpp
-    src/parts/XYZServoManager.cpp
     src/core/Time.cpp
+    src/robot/Robot.cpp
     src/robot/Leg.cpp
     src/robot/Joint.cpp
     src/math/Mathf.cpp

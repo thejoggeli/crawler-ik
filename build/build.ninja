@@ -95,8 +95,6 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o: CXX_COMPILER__CrawlerC
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
 
 build cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/libs/serialib/Serialib.cpp || cmake_object_order_depends_target_CrawlerCPP
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o.d
@@ -104,8 +102,6 @@ build cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o: CXX_COMPILER__
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/comm/SerialStream.cpp || cmake_object_order_depends_target_CrawlerCPP
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o.d
@@ -113,8 +109,6 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o: CXX_COMPILER__C
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/comm
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/parts/XYZServo.cpp || cmake_object_order_depends_target_CrawlerCPP
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o.d
@@ -122,17 +116,6 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o: CXX_COMPILER__Craw
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/parts
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
-
-build cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServoManager.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/parts/XYZServoManager.cpp || cmake_object_order_depends_target_CrawlerCPP
-  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServoManager.cpp.o.d
-  FLAGS = -g   -std=gnu++2a
-  INCLUDES = -I../cpp/src -I../cpp/libs
-  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
-  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/parts
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/core/Time.cpp || cmake_object_order_depends_target_CrawlerCPP
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o.d
@@ -140,8 +123,13 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o: CXX_COMPILER__CrawlerCP
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/core
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
+
+build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/robot/Robot.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o.d
+  FLAGS = -g   -std=gnu++2a
+  INCLUDES = -I../cpp/src -I../cpp/libs
+  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
+  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/robot
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/robot/Leg.cpp || cmake_object_order_depends_target_CrawlerCPP
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o.d
@@ -149,8 +137,6 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o: CXX_COMPILER__CrawlerCP
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/robot
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/robot/Joint.cpp || cmake_object_order_depends_target_CrawlerCPP
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o.d
@@ -158,8 +144,6 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o: CXX_COMPILER__Crawler
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/robot
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/math/Mathf.cpp || cmake_object_order_depends_target_CrawlerCPP
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o.d
@@ -167,8 +151,6 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o: CXX_COMPILER__CrawlerC
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/math
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
-  TARGET_PDB = cpp/CrawlerCPP.pdb
 
 
 # =============================================================================
@@ -178,14 +160,13 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o: CXX_COMPILER__CrawlerC
 #############################################
 # Link the executable cpp/CrawlerCPP
 
-build cpp/CrawlerCPP: CXX_EXECUTABLE_LINKER__CrawlerCPP cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServoManager.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o
+build cpp/CrawlerCPP: CXX_EXECUTABLE_LINKER__CrawlerCPP cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o
   FLAGS = -g
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/CrawlerCPP.dir/
   TARGET_FILE = cpp/CrawlerCPP
-  TARGET_PDB = cpp/CrawlerCPP.pdb
+  TARGET_PDB = CrawlerCPP.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestSerialCom
@@ -202,8 +183,6 @@ build cpp/CMakeFiles/TestSerialCom.dir/test/TestSerialCom.cpp.o: CXX_COMPILER__T
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestSerialCom.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/test
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestSerialCom.dir/
-  TARGET_PDB = cpp/TestSerialCom.pdb
 
 build cpp/CMakeFiles/TestSerialCom.dir/libs/serialib/Serialib.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/libs/serialib/Serialib.cpp || cmake_object_order_depends_target_TestSerialCom
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/libs/serialib/Serialib.cpp.o.d
@@ -211,8 +190,6 @@ build cpp/CMakeFiles/TestSerialCom.dir/libs/serialib/Serialib.cpp.o: CXX_COMPILE
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestSerialCom.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/libs/serialib
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestSerialCom.dir/
-  TARGET_PDB = cpp/TestSerialCom.pdb
 
 build cpp/CMakeFiles/TestSerialCom.dir/src/comm/SerialStream.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/src/comm/SerialStream.cpp || cmake_object_order_depends_target_TestSerialCom
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/src/comm/SerialStream.cpp.o.d
@@ -220,8 +197,6 @@ build cpp/CMakeFiles/TestSerialCom.dir/src/comm/SerialStream.cpp.o: CXX_COMPILER
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestSerialCom.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/src/comm
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestSerialCom.dir/
-  TARGET_PDB = cpp/TestSerialCom.pdb
 
 build cpp/CMakeFiles/TestSerialCom.dir/src/parts/XYZServo.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/src/parts/XYZServo.cpp || cmake_object_order_depends_target_TestSerialCom
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/src/parts/XYZServo.cpp.o.d
@@ -229,8 +204,6 @@ build cpp/CMakeFiles/TestSerialCom.dir/src/parts/XYZServo.cpp.o: CXX_COMPILER__T
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestSerialCom.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/src/parts
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestSerialCom.dir/
-  TARGET_PDB = cpp/TestSerialCom.pdb
 
 build cpp/CMakeFiles/TestSerialCom.dir/src/core/Time.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/src/core/Time.cpp || cmake_object_order_depends_target_TestSerialCom
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/src/core/Time.cpp.o.d
@@ -238,8 +211,6 @@ build cpp/CMakeFiles/TestSerialCom.dir/src/core/Time.cpp.o: CXX_COMPILER__TestSe
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestSerialCom.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/src/core
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestSerialCom.dir/
-  TARGET_PDB = cpp/TestSerialCom.pdb
 
 
 # =============================================================================
@@ -254,9 +225,8 @@ build cpp/TestSerialCom: CXX_EXECUTABLE_LINKER__TestSerialCom cpp/CMakeFiles/Tes
   OBJECT_DIR = cpp/CMakeFiles/TestSerialCom.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestSerialCom.dir/
   TARGET_FILE = cpp/TestSerialCom
-  TARGET_PDB = cpp/TestSerialCom.pdb
+  TARGET_PDB = TestSerialCom.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestEigen
@@ -273,8 +243,6 @@ build cpp/CMakeFiles/TestEigen.dir/test/TestEigen.cpp.o: CXX_COMPILER__TestEigen
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestEigen.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestEigen.dir/test
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestEigen.dir/
-  TARGET_PDB = cpp/TestEigen.pdb
 
 build cpp/CMakeFiles/TestEigen.dir/src/core/Time.cpp.o: CXX_COMPILER__TestEigen ../cpp/src/core/Time.cpp || cmake_object_order_depends_target_TestEigen
   DEP_FILE = cpp/CMakeFiles/TestEigen.dir/src/core/Time.cpp.o.d
@@ -282,8 +250,6 @@ build cpp/CMakeFiles/TestEigen.dir/src/core/Time.cpp.o: CXX_COMPILER__TestEigen 
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestEigen.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestEigen.dir/src/core
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestEigen.dir/
-  TARGET_PDB = cpp/TestEigen.pdb
 
 
 # =============================================================================
@@ -298,9 +264,8 @@ build cpp/TestEigen: CXX_EXECUTABLE_LINKER__TestEigen cpp/CMakeFiles/TestEigen.d
   OBJECT_DIR = cpp/CMakeFiles/TestEigen.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestEigen.dir/
   TARGET_FILE = cpp/TestEigen
-  TARGET_PDB = cpp/TestEigen.pdb
+  TARGET_PDB = TestEigen.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestTime
@@ -317,8 +282,6 @@ build cpp/CMakeFiles/TestTime.dir/test/TestTime.cpp.o: CXX_COMPILER__TestTime ..
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestTime.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestTime.dir/test
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestTime.dir/
-  TARGET_PDB = cpp/TestTime.pdb
 
 build cpp/CMakeFiles/TestTime.dir/src/core/Time.cpp.o: CXX_COMPILER__TestTime ../cpp/src/core/Time.cpp || cmake_object_order_depends_target_TestTime
   DEP_FILE = cpp/CMakeFiles/TestTime.dir/src/core/Time.cpp.o.d
@@ -326,8 +289,6 @@ build cpp/CMakeFiles/TestTime.dir/src/core/Time.cpp.o: CXX_COMPILER__TestTime ..
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/TestTime.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestTime.dir/src/core
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestTime.dir/
-  TARGET_PDB = cpp/TestTime.pdb
 
 
 # =============================================================================
@@ -342,9 +303,8 @@ build cpp/TestTime: CXX_EXECUTABLE_LINKER__TestTime cpp/CMakeFiles/TestTime.dir/
   OBJECT_DIR = cpp/CMakeFiles/TestTime.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = cpp/CMakeFiles/TestTime.dir/
   TARGET_FILE = cpp/TestTime
-  TARGET_PDB = cpp/TestTime.pdb
+  TARGET_PDB = TestTime.dbg
 
 # =============================================================================
 # Target aliases.
@@ -386,14 +346,14 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../cpp/CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.16/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.16/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.16/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.16/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.16/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../cpp/CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../cpp/CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.16/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.16/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.16/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.16/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.16/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.16/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.16/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.16/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../cpp/CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake: phony
 
 
 #############################################

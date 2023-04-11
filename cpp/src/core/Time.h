@@ -27,6 +27,9 @@ public:
 	static uint64_t GetTimeMicros();
 	static uint64_t GetSystemTimeMicros();
 
+	static void Sleep(float seconds);
+	static void SleepMicros(uint64_t micros);
+
 };
 
 }

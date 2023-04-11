@@ -2,6 +2,7 @@
 #include <time.h>
 #include <iostream>
 #include <math.h>
+#include <unistd.h>
 
 namespace Crawler {
 
@@ -60,6 +61,15 @@ uint64_t Time::GetSystemTimeMicros(){
 	struct timespec spec;
 	clock_gettime(CLOCK_REALTIME, &spec);
 	return static_cast<uint64_t>(spec.tv_sec) * static_cast<uint64_t>(1000000) + static_cast<uint64_t>(spec.tv_nsec/1000);
+}
+
+
+void Time::Sleep(float seconds){
+	usleep(seconds*1000000.0f);
+}
+
+void Time::SleepMicros(uint64_t micros){
+	usleep(micros);
 }
 
 }
