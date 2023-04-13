@@ -31,17 +31,17 @@ Leg::Leg(){
 
 void Leg::SetHipTransform(const Eigen::Vector3f& translation, float angle){
 
-    hip_translation = Eigen::Affine3f::Identity();
-    hip_rotation = Eigen::Affine3f::Identity();
-    hip_transform = Eigen::Affine3f::Identity();
+    hipTranslation = Eigen::Affine3f::Identity();
+    hipRotation = Eigen::Affine3f::Identity();
+    hipTransform = Eigen::Affine3f::Identity();
 
-    hip_translation.translate(translation);
-    hip_rotation.rotate(Eigen::AngleAxisf(angle, Eigen::Vector3f::UnitZ()));
-    hip_transform = hip_translation * hip_rotation;
+    hipTranslation.translate(translation);
+    hipRotation.rotate(Eigen::AngleAxisf(angle, Eigen::Vector3f::UnitZ()));
+    hipTransform = hipTranslation * hipRotation;
 
-    hip_translation_inv = hip_translation.inverse();
-    hip_rotation_inv = hip_rotation.inverse();
-    hip_transform_inv = hip_transform.inverse();
+    hipTranslationInverse = hipTranslation.inverse();
+    hipRotationInverse = hipRotation.inverse();
+    hipTransformInverse = hipTransform.inverse();
 
 }
 
@@ -135,7 +135,7 @@ bool Leg::IKSearch(const Eigen::Vector3f& Q, float phi_target, float angles_out[
 float Leg::IKLoss(float phi_target, float phi_actual, float angles_old[4], float angles_new[4]){
 
     const float w_phi = 1.0f;
-    const float w_angle = 2.0f;
+    const float w_angle = 0.5f;
 
     float loss = 0.0f;
     

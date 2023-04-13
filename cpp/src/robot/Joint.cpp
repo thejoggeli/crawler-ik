@@ -8,8 +8,11 @@ Joint::Joint(){
 
 }
 
-void Joint::SetServo(XYZServo* servo, float angleScale){
+void Joint::SetServo(XYZServo* servo){
     this->servo = servo;
+}
+
+void Joint::SetServoAngleScale( float angleScale){
     this->servoAngleScale = angleScale;
 }
 

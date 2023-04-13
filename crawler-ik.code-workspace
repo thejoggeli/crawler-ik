@@ -57,7 +57,12 @@
 			"lu": "cpp",
 			"eigen": "cpp",
 			"ctime": "cpp",
-			"fix": "cpp"
+			"fix": "cpp",
+			"complex": "cpp",
+			"cstring": "cpp",
+			"list": "cpp",
+			"map": "cpp",
+			"iomanip": "cpp"
 		}
 	}
 }

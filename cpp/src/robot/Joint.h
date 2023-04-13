@@ -24,7 +24,9 @@ public:
 
     Joint();
 
-    void SetServo(XYZServo* servo, float angleScale);
+    void SetServo(XYZServo* servo);
+
+    void SetServoAngleScale(float angle);
 
     void ReadCurrentAngle();
 

@@ -1,19 +1,23 @@
 #include "Eigen/Fix"
 #include "Eigen/Geometry"
 
-#include <iostream>
-#include <chrono>
-
 #include "comm/SerialStream.h"
 #include "parts/XYZServo.h"
 #include "robot/Leg.h"
 #include "robot/Robot.h"
+#include "brain/SurferBrain.h"
+#include "brain/EmptyBrain.h"
 
 #include "core/Time.h"
+#include "core/Config.h"
+#include "core/Log.h"
 
 #include <cmath>
 #include "math/Mathf.h"
 #include <cassert>
+#include "util/HardwareButton.h"
+#include <JetsonGPIO.h>
+#include <signal.h>
 
 
 // #include <Eigen/Dense>
@@ -21,153 +25,179 @@
 using namespace std;
 using namespace Crawler;
 
-SerialStream stream;
+Robot* robot;
 
-int main(){
+const unsigned int mainButtonPin = 24;
+HardwareButton mainButton(mainButtonPin, 200*1000);
 
-    Time::Start();
+const unsigned int mainButtonLedPin = 22;
+bool mainButtonLedState = 1;
 
-    Robot robot;
+bool exitRequested = false;
 
-    // open servo serial stream
-    if(robot.OpenSerialStream("/dev/ttyTHS0")){
-        cout << "serial stream open" << endl;
-    } else {
-        cout << "serial stream open failed" << endl;
-        return EXIT_FAILURE;
+void toggleMainButtonLed(){
+    mainButtonLedState = !mainButtonLedState;
+    GPIO::output(mainButtonLedPin, mainButtonLedState);
+}
+
+unsigned int sigIntCounter = 0;
+
+void mySigIntHandler(int s){
+    exitRequested = true;
+    sigIntCounter++;
+    if(sigIntCounter >= 3){
+        exit(EXIT_FAILURE);
     }
+}
 
-    // reboot servos
-    cout << "reboot servos" << endl;
-    for(XYZServo* servo : robot.jointServos){
-        servo->reboot();
-    }
-    Time::Sleep(3.5f);
+EmptyBrain* createEmptyBrain(Robot* robot){
+    EmptyBrain* brain = new EmptyBrain();
+    robot->SetBrain(brain);
+    return brain;
+}
+
+SurferBrain* createSurferBrain(Robot* robot){
+
+    SurferBrain* brain = new SurferBrain();
+    robot->SetBrain(brain); // pass ownership of brain to robot
+
+    // surfer stance
+    float hipAngle = 0.0f * DEG_2_RADf;
+    float feetXY = 0.12f;
+    float feetZ = -0.15f;
+    float feetPhi = 0.0 * DEG_2_RADf;
+    brain->SetStance(feetXY, feetZ, hipAngle, feetPhi);
+
+    Eigen::Vector3f pivot = robot->legs[3]->hipTranslation.translation();
+    // pivot[2] -= 0.04f; 
+    // Eigen::Vector3f pivot = robot->legs[3]->hipTranslation.translation();
+    brain->SetPivot(pivot);
     
-    // move servos to initial position
-    cout << "move servos to initial position" << endl;
-    for(Leg* leg : robot.legs){
-        leg->joints[0]->SetTargetAngle(DEG_2_RADf * 0.0f);
-        leg->joints[1]->SetTargetAngle(DEG_2_RADf * -30.0f);
-        leg->joints[2]->SetTargetAngle(DEG_2_RADf * -30.0f);
-        leg->joints[3]->SetTargetAngle(DEG_2_RADf * -30.0f);
-    }
-    robot.MoveJointsToTargetSync(2.0f);
-    Time::Sleep(2.5f);
+    return brain;
+}
 
-    float hip_angle = 0.0f * DEG_2_RADf;
-    float foot_xy = 0.14f;
-    float foot_z = -0.14f;
-    float foot_phi = 0.0f;
-    Eigen::Vector3f pos_feet_relative[4] = {
-        Eigen::Vector3f(foot_xy * cos(+hip_angle), foot_xy * sin(+hip_angle), foot_z),
-        Eigen::Vector3f(foot_xy * cos(-hip_angle), foot_xy * sin(-hip_angle), foot_z),
-        Eigen::Vector3f(foot_xy * cos(+hip_angle), foot_xy * sin(+hip_angle), foot_z),
-        Eigen::Vector3f(foot_xy * cos(-hip_angle), foot_xy * sin(-hip_angle), foot_z),
-    };
+void run(){
 
-    float angles_old[4][4];
-    for(int i = 0; i < 4; i++){
-        for(int j = 0; j < 4; j++){
-            angles_old[i][j] = 0.0f;   
-        }
-    }
+    LogInfo("Main", "run()");
 
-    Time::Update();
-    uint64_t updatePeriodMicros = 1000 * 25;
+    // start up robot
+    robot->Startup();
+
+    // debug
+    robot->legs[1]->joints[3]->SetTargetAngle(0.0f * DEG_2_RADf);
+
+    // create robot brain
+    SurferBrain* brain = createSurferBrain(robot);
+
+    // set fixed update rate
+    Time::SetFixedDeltaTimeMicros(1000*25);
     uint64_t lastUpdateTimeMicros = 0;
 
-    while(1){
+    // the beginning of time
+    Time::Start();
+
+    // main loop
+    LogInfo("Main", "start main loop");
+    while(!exitRequested){
         
+        // update time
         Time::Update();
 
-        // cout << Time::currentTimeMicros << " / " << lastUpdateTimeMicros << endl;
-
-        if(Time::currentTimeMicros - lastUpdateTimeMicros >= updatePeriodMicros){
-
-            float surf_freq = 0.5f;
-
-            float surf_dx = 0.0f;
-            float surf_dy = 0.0f;
-            float surf_dz = 0.0f;
-
-            // float surf_dx = sin(PI2f * surf_freq * Time::currentTime * 1.0f) * 0.05f;
-            // float surf_dy = cos(PI2f * surf_freq * Time::currentTime * 1.0f) * 0.05f;
-            // float surf_dz = (sin(PI2f * surf_freq * Time::currentTime)*0.5f+0.5f) * (-0.2f);
-
-            // float surf_rotx = 0.0f;
-            // float surf_roty = 0.0f;
-            float surf_rotz = 0.0f;
-
-            float surf_rotx = sin(PI2f * surf_freq * Time::currentTime * 1.0f) * 15.0f * DEG_2_RADf;
-            float surf_roty = cos(PI2f * surf_freq * Time::currentTime * 1.0f) * 15.0f * DEG_2_RADf;
-            // float surf_rotz = sin(PI2f * surf_freq * Time::currentTime * 2.0f) * 15.0f * DEG_2_RADf;
-
-            Eigen::Affine3f surf_transform = Eigen::Affine3f::Identity();
-            surf_transform.rotate(Eigen::AngleAxisf(surf_roty, Eigen::Vector3f::UnitY()));
-            surf_transform.rotate(Eigen::AngleAxisf(surf_rotx, Eigen::Vector3f::UnitX()));
-            surf_transform.rotate(Eigen::AngleAxisf(surf_rotz, Eigen::Vector3f::UnitZ()));
-            surf_transform.translate(Eigen::Vector3f(surf_dx, surf_dy, surf_dz));
-            Eigen::Affine3f surf_transform_inv = surf_transform.inverse();
-
-            bool all_ik_good = true;
-            float angles_out[4][4];
-            
-            for(int i = 0; i < 4; i++){
-
-                Leg* leg = robot.legs[i];
-
-                Eigen::Vector3f pos_foot_transformed = pos_feet_relative[i];
-                pos_foot_transformed = leg->hip_transform * pos_foot_transformed;
-                pos_foot_transformed = surf_transform_inv * pos_foot_transformed;
-                pos_foot_transformed = leg->hip_transform_inv * pos_foot_transformed;
-
-                // cout << legs[i].hip_transform.matrix() << endl;
-                // cout << legs[i].hip_transform_inv.matrix() << endl;
-                // cout << surf_transform.matrix() << endl;
-                // cout << surf_transform_inv.matrix() << endl;
-
-                bool result = leg->IKSearch(pos_foot_transformed, foot_phi, angles_out[i], angles_old[i]);
-                
-                if(!result){
-                    all_ik_good = false;
-                    break;
-                }
-            }
-
-            if(!all_ik_good){
-                cout << "all_ik_good: " << all_ik_good << endl;
-            }
-
-            if(all_ik_good){
-
-                // for(int i = 0; i < 4; i++){
-                //     for(int j = 0; j < 4; j++){
-                //         cout << "a" << i << "/" << j << "=" << (angles_out[i][j]*RAD_2_DEGf) << ", ";
-                //     }
-                // }
-                // cout << endl;
-
-                int k = 0;
-                for(int i = 0; i < 4; i++){
-                    for(int j = 0; j < 4; j++){
-                        float angle = angles_out[i][j];
-                        assert(!isnan(angle));
-                        robot.legs[i]->joints[j]->SetTargetAngle(angle);
-                    }
-                }
-                robot.MoveJointsToTargetSync(updatePeriodMicros*1.0e-6f);
-            }
-
-            lastUpdateTimeMicros = Time::currentTimeMicros;
-
+        // update buttons
+        mainButton.Update();
+        if(mainButton.onPress){
+            exitRequested = true;
         }
 
+        // update robot
+        robot->Update();
+
+        // fixed update
+        if(Time::currentTimeMicros - lastUpdateTimeMicros >= Time::fixedDeltaTimeMicros){
+            robot->FixedUpdate();
+            lastUpdateTimeMicros = Time::currentTimeMicros;
+        }
+
+        // wait for a short time before next loop
         usleep(500);
 
     }
 
-    robot.CloseSerialStream();
+    // shut down robot
+    robot->Shutdown();
+
+}
+
+void runDebug(){
+
+    LogInfo("Main", "runDebug()");
+
+    robot->RebootServos(3.5f);
+    robot->legs[1]->joints[3]->servo->setPosition(511, 100);
+    Time::Sleep(1.5f);
+
+    Time::Start();
+
+    LogInfo("Main", "start main loop");
+    while(!exitRequested){
+        Time::Update();
+        mainButton.Update();
+        if(mainButton.onPress){
+            Log(iLog << "mainBUtton.onPress");
+            toggleMainButtonLed();
+        }
+        Time::SleepMicros(500);
+    }
+}
+
+int main(){
+
+    // init config
+    Config::Init();
+
+    // init log levels
+    LogLevels::Init();
+
+    // sigint handler
+    struct sigaction sigIntHandler;
+    sigIntHandler.sa_handler = mySigIntHandler;
+    sigemptyset(&sigIntHandler.sa_mask);
+    sigIntHandler.sa_flags = 0;
+    sigaction(SIGINT, &sigIntHandler, NULL);
+
+    // set gpio mode
+    LogInfo("Main", "GPIO setup");
+    GPIO::setmode(GPIO::BCM);
+    GPIO::setup(mainButtonLedPin, GPIO::OUT);
+    GPIO::output(mainButtonLedPin, mainButtonLedState);
+
+    // init buttons
+    mainButton.Init();
+
+    // create robot
+    LogInfo("Main", "create robot");
+    robot = new Robot();
+
+    // open servo serial stream
+    if(robot->OpenSerialStream("/dev/ttyTHS0")){
+        LogInfo("Main", "serial stream open");
+    } else {
+        LogInfo("Main", "serial stream open failed");
+        return EXIT_FAILURE;
+    }
+
+    // start program
+    // runDebug();
+    run();
+
+    // close servo serial stream
+    LogInfo("Main", "serial stream close");
+    robot->CloseSerialStream();
+
+    // gpio cleanup
+    LogInfo("Main", "GPIO cleanup");
+    GPIO::cleanup(mainButtonLedPin);
+    mainButton.Cleanup();
 
     // done
     return EXIT_SUCCESS;

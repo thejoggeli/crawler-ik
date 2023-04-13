@@ -17,14 +17,14 @@ class Kinematics:
             [-dx, +dy, 0.0, 1.0],
             [-dx, -dy, 0.0, 1.0],
             [+dx, -dy, 0.0, 1.0],
-        ], dtype=np.float64)
+        ], dtype=np.float32)
 
         # hips rotations around y
-        self.hips_rotation_z = np.deg2rad(np.array([45.0, 135.0, -135.0, -45.0], dtype=np.float64))
+        self.hips_rotation_z = np.deg2rad(np.array([45.0, 135.0, -135.0, -45.0], dtype=np.float32))
 
         # hips transformation matrices
-        self.hips_matrix = np.zeros(shape=(self.hips_translation.shape[0],4,4), dtype=np.float64)
-        self.hips_matrix_inv = np.zeros(shape=(self.hips_translation.shape[0],4,4), dtype=np.float64)
+        self.hips_matrix = np.zeros(shape=(self.hips_translation.shape[0],4,4), dtype=np.float32)
+        self.hips_matrix_inv = np.zeros(shape=(self.hips_translation.shape[0],4,4), dtype=np.float32)
         for i in range(self.hips_translation.shape[0]):
             Ti = MathUtils.matrix4x4()
             Ri = MathUtils.matrix4x4()
@@ -38,11 +38,11 @@ class Kinematics:
         self.phi_max = np.deg2rad(50.0)
 
         # limb lengths
-        self.lengths = np.array([0.07, 0.07, 0.07, 0.096], dtype=np.float64)
+        self.lengths = np.array([0.07, 0.07, 0.07, 0.096], dtype=np.float32)
 
         # joint angle limits
-        self.limits_min = np.deg2rad([-90.0, -90.0, -90.0, -90.0], dtype=np.float64)
-        self.limits_max = np.deg2rad([+90.0, +90.0, +90.0, +90.0], dtype=np.float64)
+        self.limits_min = np.deg2rad([-90.0, -90.0, -90.0, -90.0], dtype=np.float32)
+        self.limits_max = np.deg2rad([+90.0, +90.0, +90.0, +90.0], dtype=np.float32)
 
 
     def ik(self, Q, phi, angles_out):
@@ -119,13 +119,12 @@ class Kinematics:
 
         return loss
 
-    
     def search(self, Q, phi_target, angles_out, angles_old=None, num_phi_vals=255):
 
         phi_vals = np.linspace(self.phi_min, self.phi_max, num_phi_vals)
         best_loss = np.inf
         best_loss_idx = -1
-        angles_ik = np.zeros(4, dtype=np.float64)
+        angles_ik = np.zeros(4, dtype=np.float32)
 
         for idx, phi in enumerate(phi_vals):
 
@@ -147,4 +146,99 @@ class Kinematics:
             self.ik(Q, best_phi, angles_out)
 
         return has_result, best_phi
+    
+    def search_brent(self, Q, phi_target, angles_out, angles_old=None):
 
+        a = self.phi_min
+        b = self.phi_max
+        tol = 1.0e-6
+        max_iter=100
+
+        angles_ik = np.zeros(4, dtype=np.float32)
+        golden_ratio = (3.0 - np.sqrt(5.0)) / 2.0
+
+        x = a + golden_ratio * (b - a)
+        w = x
+        v = x
+
+        result = self.ik(Q, x, angles_ik)
+        if(result):
+            fx = self.loss(phi_target, phi_actual=x, angles_old=angles_old, angles_new=angles_ik)
+        else:
+            fx = 1.0e6
+
+        fw = fx
+        fv = fx
+
+        u = 0
+        p = 0
+        q = 0
+
+        for _ in range(max_iter):
+
+            print(f"x={np.rad2deg(x):.3f}, u={np.rad2deg(u):.3f}, a={np.rad2deg(a):.3f}, b={np.rad2deg(b):.3f} p={np.rad2deg(p):.3f} q={np.rad2deg(q):.3f}")
+
+            midpoint = (a + b) / 2
+            tol1 = tol * abs(x) + tol / 10
+            tol2 = 2 * tol1
+
+            if abs(x - midpoint) <= (tol2 - (b - a) / 2):
+                return True, x
+
+            p = 0
+            q = 0
+            r = 0
+
+            if x != w and x != v and w != v:
+                r = (x - w) * (fx - fv)
+                q = (x - v) * (fx - fw)
+                p = (x - v) * q - (x - w) * r
+                q = 2 * (q - r)
+
+                if q > 0:
+                    p = -p
+                else:
+                    q = -q
+
+            if abs(p) < abs(q * tol1) and p > q * (a - x) and p < q * (b - x):
+                u = x + p / q
+            else:
+                u = x + tol1 if x < midpoint else x - tol1
+                u = max(min(u, b), a)
+
+
+            result = self.ik(Q, u, angles_ik)
+            if(result):
+                fu = self.loss(phi_target, phi_actual=u, angles_old=angles_old, angles_new=angles_ik)
+            else:
+                fu = 1.0e6
+
+            if fu <= fx:
+                if u >= x:
+                    a = x
+                else:
+                    b = x
+
+                v = w
+                w = x
+                x = u
+                fv = fw
+                fw = fx
+                fx = fu
+            else:
+                if u < x:
+                    a = u
+                else:
+                    b = u
+
+                if fu <= fw or w == x:
+                    v = w
+                    w = u
+                    fv = fw
+                    fw = fu
+                elif fu <= fv or v == x or v == w:
+                    v = u
+                    fv = fu
+
+        return False, np.nan
+    

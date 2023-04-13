@@ -9,6 +9,9 @@ class Time {
 public:
 
 	Time(){}
+
+	static uint64_t fixedDeltaTimeMicros;
+	static float fixedDeltaTime;
 	
 	static uint64_t deltaTimeMicros;
 	static uint64_t currentTimeMicros;
@@ -19,6 +22,8 @@ public:
 	static float currentTime;
 	static float lastTime;
 	static float startTime;
+
+	static void SetFixedDeltaTimeMicros(uint64_t micros);
 
 	static void Start();
 	static void Update();

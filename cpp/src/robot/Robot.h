@@ -1,12 +1,16 @@
 #pragma once
 
-#include "Leg.h"
-#include "Joint.h"
-#include "parts/XYZServo.h"
 #include <vector>
-#include "comm/SerialStream.h"
+#include <cstdint>
+
+class XYZServo;
+class SerialStream;
 
 namespace Crawler {
+
+class Leg;
+class Joint;
+class Brain;
 
 class Robot {
 private:
@@ -16,11 +20,11 @@ private:
 
 public:
 
-    SerialStream* servoSerialStream;
-    
-    XYZServo* masterServo;
-    std::vector<XYZServo*> jointServos;
+    Brain* brain = nullptr;
+    SerialStream* servoSerialStream = nullptr;
+    XYZServo* masterServo = nullptr;
 
+    std::vector<XYZServo*> jointServos;
     std::vector<Leg*> legs;
     std::vector<Joint*> jointsList;
 
@@ -34,6 +38,18 @@ public:
     // void FixedUpdate();
 
     void MoveJointsToTargetSync(float time);
+
+    void SetBrain(Brain* brain);
+
+
+    void Update();
+
+    void FixedUpdate();
+
+    void Startup();
+    void Shutdown();
+
+    void RebootServos(float sleepTime);
 
 };
 

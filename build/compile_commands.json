@@ -1,109 +1,151 @@
 [
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/CrawlerCPP.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/CrawlerCPP.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/CrawlerCPP.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/libs/serialib/Serialib.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/libs/serialib/Serialib.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/libs/serialib/Serialib.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/comm/SerialStream.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/comm/SerialStream.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/comm/SerialStream.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/parts/XYZServo.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/parts/XYZServo.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/parts/XYZServo.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/robot/Robot.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Log.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Log.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/core/Log.cpp"
+},
+
+{
+  "directory": "/home/crawler/Projects/crawler-ik/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Config.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Config.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/core/Config.cpp"
+},
+
+{
+  "directory": "/home/crawler/Projects/crawler-ik/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/robot/Robot.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/robot/Robot.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/robot/Leg.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/robot/Leg.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/robot/Leg.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/robot/Joint.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/robot/Joint.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/robot/Joint.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/math/Mathf.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/brain/Brain.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/brain/Brain.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/brain/Brain.cpp"
+},
+
+{
+  "directory": "/home/crawler/Projects/crawler-ik/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/brain/SurferBrain.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/brain/SurferBrain.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/brain/SurferBrain.cpp"
+},
+
+{
+  "directory": "/home/crawler/Projects/crawler-ik/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/brain/EmptyBrain.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/brain/EmptyBrain.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/brain/EmptyBrain.cpp"
+},
+
+{
+  "directory": "/home/crawler/Projects/crawler-ik/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/math/Mathf.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/math/Mathf.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/test/TestSerialCom.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/test/TestSerialCom.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/util/HardwareButton.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/util/HardwareButton.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/util/HardwareButton.cpp"
+},
+
+{
+  "directory": "/home/crawler/Projects/crawler-ik/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/CrawlerCPP.dir/src/util/Strings.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/util/Strings.cpp",
+  "file": "/home/crawler/Projects/crawler-ik/cpp/src/util/Strings.cpp"
+},
+
+{
+  "directory": "/home/crawler/Projects/crawler-ik/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/test/TestSerialCom.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/test/TestSerialCom.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/test/TestSerialCom.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/libs/serialib/Serialib.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/libs/serialib/Serialib.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/libs/serialib/Serialib.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/libs/serialib/Serialib.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/libs/serialib/Serialib.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/src/comm/SerialStream.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/comm/SerialStream.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/src/comm/SerialStream.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/comm/SerialStream.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/comm/SerialStream.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/src/parts/XYZServo.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/parts/XYZServo.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/src/parts/XYZServo.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/parts/XYZServo.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/parts/XYZServo.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestSerialCom.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestEigen.dir/test/TestEigen.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/test/TestEigen.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestEigen.dir/test/TestEigen.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/test/TestEigen.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/test/TestEigen.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestEigen.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestEigen.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestTime.dir/test/TestTime.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/test/TestTime.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestTime.dir/test/TestTime.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/test/TestTime.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/test/TestTime.cpp"
 },
 
 {
   "directory": "/home/crawler/Projects/crawler-ik/build",
-  "command": "/usr/bin/aarch64-linux-gnu-g++   -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestTime.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DCRAWLER_CONFIG_PATH=\\\"/home/crawler/Projects/crawler-ik/config\\\" -DLEDLIB_WEB_PATH=\\\"/home/crawler/Projects/crawler-ik/web\\\" -I../cpp/src -I../cpp/libs  -g   -std=gnu++2a -o cpp/CMakeFiles/TestTime.dir/src/core/Time.cpp.o -c /home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp",
   "file": "/home/crawler/Projects/crawler-ik/cpp/src/core/Time.cpp"
 }
 ]

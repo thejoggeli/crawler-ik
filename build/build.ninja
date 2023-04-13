@@ -90,6 +90,7 @@ build cpp/edit_cache: phony cpp/CMakeFiles/edit_cache.util
 build cmake_object_order_depends_target_CrawlerCPP: phony || cpp/CMakeFiles/CrawlerCPP.dir
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/CrawlerCPP.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -97,6 +98,7 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o: CXX_COMPILER__CrawlerC
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src
 
 build cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/libs/serialib/Serialib.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -104,6 +106,7 @@ build cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o: CXX_COMPILER__
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/comm/SerialStream.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -111,6 +114,7 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o: CXX_COMPILER__C
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/comm
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/parts/XYZServo.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -118,13 +122,31 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o: CXX_COMPILER__Craw
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/parts
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/core/Time.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/core
 
+build cpp/CMakeFiles/CrawlerCPP.dir/src/core/Log.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/core/Log.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
+  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/core/Log.cpp.o.d
+  FLAGS = -g   -std=gnu++2a
+  INCLUDES = -I../cpp/src -I../cpp/libs
+  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
+  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/core
+
+build cpp/CMakeFiles/CrawlerCPP.dir/src/core/Config.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/core/Config.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
+  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/core/Config.cpp.o.d
+  FLAGS = -g   -std=gnu++2a
+  INCLUDES = -I../cpp/src -I../cpp/libs
+  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
+  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/core
+
 build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/robot/Robot.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -132,6 +154,7 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o: CXX_COMPILER__Crawler
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/robot
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/robot/Leg.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -139,18 +162,60 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o: CXX_COMPILER__CrawlerCP
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/robot
 
 build cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/robot/Joint.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/robot
 
+build cpp/CMakeFiles/CrawlerCPP.dir/src/brain/Brain.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/brain/Brain.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
+  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/brain/Brain.cpp.o.d
+  FLAGS = -g   -std=gnu++2a
+  INCLUDES = -I../cpp/src -I../cpp/libs
+  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
+  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/brain
+
+build cpp/CMakeFiles/CrawlerCPP.dir/src/brain/SurferBrain.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/brain/SurferBrain.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
+  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/brain/SurferBrain.cpp.o.d
+  FLAGS = -g   -std=gnu++2a
+  INCLUDES = -I../cpp/src -I../cpp/libs
+  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
+  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/brain
+
+build cpp/CMakeFiles/CrawlerCPP.dir/src/brain/EmptyBrain.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/brain/EmptyBrain.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
+  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/brain/EmptyBrain.cpp.o.d
+  FLAGS = -g   -std=gnu++2a
+  INCLUDES = -I../cpp/src -I../cpp/libs
+  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
+  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/brain
+
 build cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/math/Mathf.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/math
+
+build cpp/CMakeFiles/CrawlerCPP.dir/src/util/HardwareButton.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/util/HardwareButton.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
+  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/util/HardwareButton.cpp.o.d
+  FLAGS = -g   -std=gnu++2a
+  INCLUDES = -I../cpp/src -I../cpp/libs
+  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
+  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/util
+
+build cpp/CMakeFiles/CrawlerCPP.dir/src/util/Strings.cpp.o: CXX_COMPILER__CrawlerCPP ../cpp/src/util/Strings.cpp || cmake_object_order_depends_target_CrawlerCPP
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
+  DEP_FILE = cpp/CMakeFiles/CrawlerCPP.dir/src/util/Strings.cpp.o.d
+  FLAGS = -g   -std=gnu++2a
+  INCLUDES = -I../cpp/src -I../cpp/libs
+  OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
+  OBJECT_FILE_DIR = cpp/CMakeFiles/CrawlerCPP.dir/src/util
 
 
 # =============================================================================
@@ -160,8 +225,9 @@ build cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o: CXX_COMPILER__CrawlerC
 #############################################
 # Link the executable cpp/CrawlerCPP
 
-build cpp/CrawlerCPP: CXX_EXECUTABLE_LINKER__CrawlerCPP cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o
+build cpp/CrawlerCPP: CXX_EXECUTABLE_LINKER__CrawlerCPP cpp/CMakeFiles/CrawlerCPP.dir/src/CrawlerCPP.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/libs/serialib/Serialib.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/comm/SerialStream.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/parts/XYZServo.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Time.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Log.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/core/Config.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Robot.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Leg.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/robot/Joint.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/brain/Brain.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/brain/SurferBrain.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/brain/EmptyBrain.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/math/Mathf.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/util/HardwareButton.cpp.o cpp/CMakeFiles/CrawlerCPP.dir/src/util/Strings.cpp.o | /usr/local/lib/libJetsonGPIO.so.1.2.3
   FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libJetsonGPIO.so.1.2.3  -lpthread
   OBJECT_DIR = cpp/CMakeFiles/CrawlerCPP.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -178,6 +244,7 @@ build cpp/CrawlerCPP: CXX_EXECUTABLE_LINKER__CrawlerCPP cpp/CMakeFiles/CrawlerCP
 build cmake_object_order_depends_target_TestSerialCom: phony || cpp/CMakeFiles/TestSerialCom.dir
 
 build cpp/CMakeFiles/TestSerialCom.dir/test/TestSerialCom.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/test/TestSerialCom.cpp || cmake_object_order_depends_target_TestSerialCom
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/test/TestSerialCom.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -185,6 +252,7 @@ build cpp/CMakeFiles/TestSerialCom.dir/test/TestSerialCom.cpp.o: CXX_COMPILER__T
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/test
 
 build cpp/CMakeFiles/TestSerialCom.dir/libs/serialib/Serialib.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/libs/serialib/Serialib.cpp || cmake_object_order_depends_target_TestSerialCom
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/libs/serialib/Serialib.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -192,6 +260,7 @@ build cpp/CMakeFiles/TestSerialCom.dir/libs/serialib/Serialib.cpp.o: CXX_COMPILE
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/libs/serialib
 
 build cpp/CMakeFiles/TestSerialCom.dir/src/comm/SerialStream.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/src/comm/SerialStream.cpp || cmake_object_order_depends_target_TestSerialCom
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/src/comm/SerialStream.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -199,6 +268,7 @@ build cpp/CMakeFiles/TestSerialCom.dir/src/comm/SerialStream.cpp.o: CXX_COMPILER
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/src/comm
 
 build cpp/CMakeFiles/TestSerialCom.dir/src/parts/XYZServo.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/src/parts/XYZServo.cpp || cmake_object_order_depends_target_TestSerialCom
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/src/parts/XYZServo.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -206,6 +276,7 @@ build cpp/CMakeFiles/TestSerialCom.dir/src/parts/XYZServo.cpp.o: CXX_COMPILER__T
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestSerialCom.dir/src/parts
 
 build cpp/CMakeFiles/TestSerialCom.dir/src/core/Time.cpp.o: CXX_COMPILER__TestSerialCom ../cpp/src/core/Time.cpp || cmake_object_order_depends_target_TestSerialCom
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestSerialCom.dir/src/core/Time.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -238,6 +309,7 @@ build cpp/TestSerialCom: CXX_EXECUTABLE_LINKER__TestSerialCom cpp/CMakeFiles/Tes
 build cmake_object_order_depends_target_TestEigen: phony || cpp/CMakeFiles/TestEigen.dir
 
 build cpp/CMakeFiles/TestEigen.dir/test/TestEigen.cpp.o: CXX_COMPILER__TestEigen ../cpp/test/TestEigen.cpp || cmake_object_order_depends_target_TestEigen
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestEigen.dir/test/TestEigen.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -245,6 +317,7 @@ build cpp/CMakeFiles/TestEigen.dir/test/TestEigen.cpp.o: CXX_COMPILER__TestEigen
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestEigen.dir/test
 
 build cpp/CMakeFiles/TestEigen.dir/src/core/Time.cpp.o: CXX_COMPILER__TestEigen ../cpp/src/core/Time.cpp || cmake_object_order_depends_target_TestEigen
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestEigen.dir/src/core/Time.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -277,6 +350,7 @@ build cpp/TestEigen: CXX_EXECUTABLE_LINKER__TestEigen cpp/CMakeFiles/TestEigen.d
 build cmake_object_order_depends_target_TestTime: phony || cpp/CMakeFiles/TestTime.dir
 
 build cpp/CMakeFiles/TestTime.dir/test/TestTime.cpp.o: CXX_COMPILER__TestTime ../cpp/test/TestTime.cpp || cmake_object_order_depends_target_TestTime
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestTime.dir/test/TestTime.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -284,6 +358,7 @@ build cpp/CMakeFiles/TestTime.dir/test/TestTime.cpp.o: CXX_COMPILER__TestTime ..
   OBJECT_FILE_DIR = cpp/CMakeFiles/TestTime.dir/test
 
 build cpp/CMakeFiles/TestTime.dir/src/core/Time.cpp.o: CXX_COMPILER__TestTime ../cpp/src/core/Time.cpp || cmake_object_order_depends_target_TestTime
+  DEFINES = -DCRAWLER_CONFIG_PATH=\"/home/crawler/Projects/crawler-ik/config\" -DLEDLIB_WEB_PATH=\"/home/crawler/Projects/crawler-ik/web\"
   DEP_FILE = cpp/CMakeFiles/TestTime.dir/src/core/Time.cpp.o.d
   FLAGS = -g   -std=gnu++2a
   INCLUDES = -I../cpp/src -I../cpp/libs
@@ -346,14 +421,14 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../cpp/CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../cpp/CMakeLists.txt /usr/local/lib/cmake/JetsonGPIO/JetsonGPIOConfig.cmake /usr/local/lib/cmake/JetsonGPIO/JetsonGPIOConfigVersion.cmake /usr/local/lib/cmake/JetsonGPIO/JetsonGPIOTargets-noconfig.cmake /usr/local/lib/cmake/JetsonGPIO/JetsonGPIOTargets.cmake /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.16/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.16/Modules/FindPackageMessage.cmake /usr/share/cmake-3.16/Modules/FindThreads.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../cpp/CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../cpp/CMakeLists.txt /usr/local/lib/cmake/JetsonGPIO/JetsonGPIOConfig.cmake /usr/local/lib/cmake/JetsonGPIO/JetsonGPIOConfigVersion.cmake /usr/local/lib/cmake/JetsonGPIO/JetsonGPIOTargets-noconfig.cmake /usr/local/lib/cmake/JetsonGPIO/JetsonGPIOTargets.cmake /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/CheckCSourceCompiles.cmake /usr/share/cmake-3.16/Modules/CheckIncludeFile.cmake /usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.16/Modules/FindPackageMessage.cmake /usr/share/cmake-3.16/Modules/FindThreads.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake: phony
 
 
 #############################################

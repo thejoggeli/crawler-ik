@@ -6,6 +6,10 @@
 
 namespace Crawler {
 
+
+uint64_t Time::fixedDeltaTimeMicros = 0;
+float Time::fixedDeltaTime = 0.0f;
+
 uint64_t Time::deltaTimeMicros = 0;
 uint64_t Time::currentTimeMicros = 0;
 uint64_t Time::lastTimeMicros = 0;
@@ -70,6 +74,11 @@ void Time::Sleep(float seconds){
 
 void Time::SleepMicros(uint64_t micros){
 	usleep(micros);
+}
+
+void Time::SetFixedDeltaTimeMicros(uint64_t micros){
+	Time::fixedDeltaTimeMicros = micros;
+	Time::fixedDeltaTime = micros * 1.0e-6f;
 }
 
 }

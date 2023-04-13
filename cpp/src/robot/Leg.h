@@ -14,14 +14,14 @@ public:
     std::vector<Joint*> joints;
 
     // transform from robot center to hip
-    Eigen::Affine3f hip_translation = Eigen::Affine3f::Identity();
-    Eigen::Affine3f hip_rotation = Eigen::Affine3f::Identity();
-    Eigen::Affine3f hip_transform = Eigen::Affine3f::Identity();
+    Eigen::Affine3f hipTranslation = Eigen::Affine3f::Identity();
+    Eigen::Affine3f hipRotation = Eigen::Affine3f::Identity();
+    Eigen::Affine3f hipTransform = Eigen::Affine3f::Identity();
 
     // transform from hip to robot center
-    Eigen::Affine3f hip_translation_inv = Eigen::Affine3f::Identity();
-    Eigen::Affine3f hip_rotation_inv = Eigen::Affine3f::Identity();
-    Eigen::Affine3f hip_transform_inv = Eigen::Affine3f::Identity();
+    Eigen::Affine3f hipTranslationInverse = Eigen::Affine3f::Identity();
+    Eigen::Affine3f hipRotationInverse = Eigen::Affine3f::Identity();
+    Eigen::Affine3f hipTransformInverse = Eigen::Affine3f::Identity();
 
     Leg();
 
